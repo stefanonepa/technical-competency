@@ -41,7 +41,7 @@ If you need to add any additional library dependencies, feel free to do so.
 My Movie DB
 -----------
 
-This HTML application is a simple Angular 1 app for a database of Movies from scraped from IMDB.
+This HTML application is a simple Angular 1 app for a database of Movies scraped from IMDB.
 
 The application files are in the directory
 
@@ -66,5 +66,4 @@ Then update the HTML application to fulfil the requirements to the best of your 
 
 Please consider the user's experience, visual appeal and cross browser support.
 
-Good luck and have fun!  
-
+Good luck and have fun!
