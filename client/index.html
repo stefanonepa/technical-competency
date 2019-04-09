@@ -1,21 +1,37 @@
 <!doctype html>
 <html ng-app="MyMovieDBApp">
     <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
-        <script src="app.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-route.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-resource.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ngInfiniteScroll/1.2.2/ng-infinite-scroll.js"></script>
+
+        <script src="promotions.js"></script>
+        <script src="app.module.js"></script>
+        <script src="app.config.js"></script>
+        <script src="core/core.module.js"></script>
+        <script src="core/movie/movie.module.js"></script>
+        <script src="core/movie/movie.service.js"></script>
+        <script src="movie-list/movie-list.module.js"></script>
+        <script src="movie-list/movie-list.component.js"></script>
+        <script src="crew-details/crew-details.module.js"></script>
+        <script src="crew-details/crew-details.component.js"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
         <title>My Movie DB</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container">
-            <h1><img src="images/noun_Film_8085.png" height="64" width="64">My Movie DB</h1>
-            <section ng-controller="MyMoviesController">
-                <div ng-repeat="movie in movies">
-                    <span>{{movie.title}} ({{movie.year}})</span>
-                </div>
-            </section>
+        <section ng-controller="MyPromotionsController" class="container">
+            <h1>
+                <img src="images/noun_Film_8085.png" height="64" width="64">My Movie DB
+                <img ng-if="paidPromotion.title" ng-src="{{paidPromotion.imageUrl}}" alt="{{paidPromotion.title}}" height="64">
+            </h1>
+        </section>
+        <div class="view-container">
+            <div ng-view class="view-frame"></div>
         </div>
     </body>
 </html>

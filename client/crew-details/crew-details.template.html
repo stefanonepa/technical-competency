@@ -1,0 +1,36 @@
+<div class="container">
+    <div>
+        <h1>{{ $ctrl.crewName }} <a href="#!/movies/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Back to movie list</a></h1>
+    </div>
+
+    <div>
+        <h2>Movies</h2>
+
+        <table class="table table-hover" infinite-scroll="$ctrl.loadMore()" infinite-scroll-distance="1">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-show="filteredMovies.length === 0">
+                    <td class="center" colspan="4">Nothing match</td>
+                </tr>
+
+                <tr
+                    ng-repeat="movie in filteredMovies = ($ctrl.movies | filter: $ctrl.showRelatedCrew | orderBy: ['-year','title'] | limitTo:$ctrl.numberToDisplay) track by $index">
+                    <td>{{movie.title}}</td>
+                    <td>
+                        <ul>
+                            <li ng-repeat="castMember in movie.cast track by $index">
+                                <a href="{{'#!/crew/' + castMember.replace(' ', '_')}}">{{castMember}}</a>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>{{movie.year}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

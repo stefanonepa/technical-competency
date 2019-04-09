@@ -1,6 +1,6 @@
 [
-  "Bumblebee",
-  "Spider-Man: Into the Spider-Verse",
-  "Mortal Engines",
-  "The Nutcracker and the Four Realms"
+  { "title": "Bumblebee", "image": "bumblebee_poster.jpg" },
+  { "title": "Spider-Man: Into the Spider-Verse", "image": "spiderman_poster.jpg" },
+  { "title": "Mortal Engines", "image": "mortal_engines_poster.jpg" },
+  { "title": "The Nutcracker and the Four Realms", "image": "nutcracker_poster.jpg" }
 ]
