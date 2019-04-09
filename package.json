@@ -1,0 +1,26 @@
+{
+  "name": "technical-competency",
+  "version": "1.0.0",
+  "description": "Technical Competency - Javascript =================================",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpongeUK/technical-competency.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SpongeUK/technical-competency/issues"
+  },
+  "homepage": "https://github.com/SpongeUK/technical-competency#readme",
+  "dependencies": {
+    "serve": "^10.1.2"
+  }
+}
